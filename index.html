@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كتاب رقمي تفاعلي</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Book Container -->
+  <div class="book-wrapper">
+    <div class="book-container">
+      <!-- Book Cover Shadow -->
+      <div class="book-shadow"></div>
+      
+      <!-- Main Flipbook -->
+      <div id="flipbook" class="flipbook"></div>
+      
+      <!-- Book Binding Effect -->
+      <div class="book-spine"></div>
+    </div>
+    
+    <!-- Page Counter -->
+    <div class="page-counter">
+      <span id="current-page">1</span> من <span id="total-pages">56</span>
+    </div>
+    
+    <!-- Navigation Controls -->
+    <div class="controls">
+      <button id="prev" class="nav-btn">
+        <span>الصفحة السابقة</span>
+        <div class="btn-icon">⟸</div>
+      </button>
+      
+      <div class="page-input-wrapper">
+        <label>انتقل إلى الصفحة:</label>
+        <input type="number" id="page-input" min="1" max="56" placeholder="رقم">
+        <button id="go-page">اذهب</button>
+      </div>
+      
+      <button id="next" class="nav-btn">
+        <span>الصفحة التالية</span>
+        <div class="btn-icon">⟹</div>
+      </button>
+    </div>
+  </div>
+
+ <!-- Remove this entire section -->
+<!-- Audio for page turn sound -->
+<audio id="page-turn-sound" preload="auto">
+  <source src="sounds/page-turn.mp3" type="audio/mpeg">
+  <source src="sounds/page-turn.ogg" type="audio/ogg">
+</audio>
+
+
+  <!-- JavaScript Dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/turn.min.js"></script>
+<script src="js/script.js"></script>
+<!-- Remove this line: <script src="script.js"></script> -->
+</body>
+</html>
+
